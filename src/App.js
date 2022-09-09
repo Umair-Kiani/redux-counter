@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from '@emotion/styled'
+import { Grid } from '@mui/material'
+import React from 'react'
+import './App.css'
+import MyCounter from './features/counter/Index'
 
-function App() {
+const GRID = styled(Grid)`
+justify-content: center;
+align-items: center;
+text-align: center;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div container>
+    
+      <GRID container>
+        <Grid item xs={12}> <h1>Redux Counter</h1> </Grid>
+         <Grid item xs={12}> <MyCounter /> </Grid>
+      
+      </GRID>
+     
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
